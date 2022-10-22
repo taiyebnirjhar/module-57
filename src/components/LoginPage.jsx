@@ -27,6 +27,8 @@ function LoginPage() {
     const pass = e.target.value;
     if (pass.length <= 8) {
       setPassValidate(true);
+    } else if (!/^(?=.*[0-9])/.test(pass)) {
+      setPassValidate(true);
     } else {
       setPassValidate(false);
     }
